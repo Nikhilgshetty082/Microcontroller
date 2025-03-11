@@ -1,0 +1,26 @@
+   AREA F,CODE,READONLY
+START
+   LDR R0,MEMORY
+   MOV R1,#0
+   STR R1,[R0,#4]
+   MOV R2,#1
+   STR R2,[R0,#8]
+   ADD R1,R1,R2
+   STR R1,[R0,#12]
+   ADD R2,R1,R2
+   STR R2,[R0,#16]
+   ADD R1,R1,R2
+   STR R1,[R0,#20]
+   ADD R2,R1,R2
+   STR R2,[R0,#24]
+   ADD R1,R1,R2
+   STR R1,[R0,#28]
+   ADD R2,R1,R2
+   STR R2,[R0,#32]
+   ADD R1,R1,R2
+   STR R1,[R0,#36]
+   ADD R2,R1,R2
+   STR R2,[R0,#40]
+   MEMORY DCD 0x40000000
+   BX LR
+   END
